@@ -1,7 +1,6 @@
 import numpy as np
 import sys
 import os
-sys.path.append('/Users/user/GT')
 from codes import diagonalize
 #sys.path.append('/Users/user/GT/HF')
 #import make_ham
@@ -12,7 +11,7 @@ class hartree_fock():
     def __init__(self, S, Hcore, G, itrmax, Nu, Nd, Ns, orbs, Eorb_u, Eorb_d, orb_u, orb_d, Enew, P, restrict = True):
 
         self.Ns = Ns #number of spacial orbitals
-        self.Nu = Nu #number of up electrons 
+        self.Nu = Nu #number of up electrons
         self.Nd = Nd #number of down electrons
         self.Hcore = Hcore
         self.S = S
@@ -37,7 +36,7 @@ class hartree_fock():
         print('********************************************')
 
 
-       #initiate P 
+       #initiate P
         eorb,self.orbs = diagonalize(self.Hcore, self.S) #orbitals=eigonvectors, orbital energies =eigenvalues
 
         Pu = self.rdm_1el(self.orbs, self.Nu )

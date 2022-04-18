@@ -1,7 +1,6 @@
 import numpy as np
 import sys
 import os
-sys.path.append('/Users/user/GT')
 import codes
 
 
@@ -83,7 +82,7 @@ class LJ():
 
    # def gr_result( self ):
 
-        ###################################################   
+        ###################################################
 
     def velocity_verlet( self ):
 
@@ -142,7 +141,7 @@ class LJ():
         sigma = np.sqrt(1.0/(beta))
         self.vvv = np.random.normal(0.0, sigma, self.Natoms*self.Ndim).reshape( self.Natoms, self.Ndim )
 
-        #eliminate center of mass motion 
+        #eliminate center of mass motion
 
         center_of_mass = np.sum( self.vvv, axis=0)/ self.Natoms #axis=0 sum over column
         self.vvv -= center_of_mass
@@ -153,8 +152,8 @@ class LJ():
         scale = np.sqrt( self.temp / ( np.sum( self.vvv**2 ) / ( self.Ndim*self.Natoms ) ) )
         self.vvv *= scale
 
-        #calculate temperature 
-        #velocity at the center of mass is zero 
+        #calculate temperature
+        #velocity at the center of mass is zero
         ##################################################
 
     def get_pe( self ):

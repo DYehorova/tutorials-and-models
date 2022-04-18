@@ -2,8 +2,6 @@ import numpy as np
 import math
 import sys
 import os
-import utils
-sys.path.append('/Users/user/GT')
 import codes
 class harm_osc():
 
@@ -52,7 +50,7 @@ class harm_osc():
 
             chk = np.exp( - self.beta * (new_pe - old_pe))
             print('chk is', chk)
-            if  ( chk > random_2): #no need to include 'and != 1' because fcn=1 only if x_new=xi 
+            if  ( chk > random_2): #no need to include 'and != 1' because fcn=1 only if x_new=xi
                 xo = xn
                 old_pe = new_pe
             else:
@@ -88,7 +86,7 @@ class harm_osc():
 
         chk = np.exp( - self.beta * (new_pe - old_pe))
         print('chk is', chk)
-        if  ( chk > random_2): #no need to include 'and != 1' because fcn=1 only if x_new=xi 
+        if  ( chk > random_2): #no need to include 'and != 1' because fcn=1 only if x_new=xi
             xo = xn
 
         else:
@@ -97,16 +95,16 @@ class harm_osc():
 ###########################################################
 
  #   def sample( self ):
-#output energy for each move or avarage of all moves? 
+#output energy for each move or avarage of all moves?
  #       self.get_pe(self.xxx)
- #       positions.append(self.xxx)#do 'positions' have to be a self.obj? 
+ #       positions.append(self.xxx)#do 'positions' have to be a self.obj?
 
-###########################################################    
+###########################################################
 
     def init( self ):
         positions = []
         positions.append(self.xxx)
-#do i need it to be sample then move so I record the initial position in the list? 
+#do i need it to be sample then move so I record the initial position in the list?
 ###########################################################
 
 
